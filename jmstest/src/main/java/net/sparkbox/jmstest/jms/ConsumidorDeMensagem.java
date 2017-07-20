@@ -10,9 +10,9 @@ import javax.jms.ObjectMessage;
 import net.sparkbox.jmstest.entidade.Usuario;
  
  
-@MessageDriven(activationConfig = {
-        @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-        @ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/topic/test") })
+//@MessageDriven(activationConfig = {
+//@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
+//@ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/queue/test") })
 public class ConsumidorDeMensagem implements MessageListener {
  
     public void onMessage(Message message) {

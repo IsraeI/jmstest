@@ -11,8 +11,9 @@ import net.sparkbox.jmstest.entidade.Usuario;
  
  
 @MessageDriven(activationConfig = {
-        @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-        @ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/topic/test") })
+@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
+@ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/queue/test"),
+@ActivationConfigProperty(propertyName = "connectionParameters", propertyValue = "host=localhost;port=5445")})
 public class ConsumidorDeMensagem2 implements MessageListener {
  
     public void onMessage(Message message) {

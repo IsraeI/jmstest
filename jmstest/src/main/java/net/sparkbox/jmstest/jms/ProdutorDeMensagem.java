@@ -23,7 +23,7 @@ public class ProdutorDeMensagem {
     @Resource(mappedName = "java:/JmsXA")
     private ConnectionFactory connectionFactory;
  
-    @Resource(mappedName = "java:/topic/test")
+    @Resource(mappedName = "java:/queue/test")
     private Destination destination;
  
     private Connection connection;
